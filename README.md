@@ -3,7 +3,7 @@
 ## 1. Extraction from Input Form: FULLY FUNCTIONAL
 ### Input: 
 	Google Excel Sheet <FAU ITgeP Input>: [(Checked), Time, E-Mail, Manufacturer (Example: Kinavo Servo Motor (changzhou) Ltd), 
-	Description (Example: Kinavo Motor SMH40-103028ENL), Part Number (Example: SMH40-103028ENL)]<br />
+	Description (Example: Kinavo Motor SMH40-103028ENL), Part Number (Example: SMH40-103028ENL)]
 ### Output: 
 	Input Tabelle.xlsx [(Checked), Time, E-Mail, Manufacturer (Example: Kinavo Servo Motor (changzhou) Ltd), 
 	Description (Example: Kinavo Motor SMH40-103028ENL), Part Number (Example: SMH40-103028ENL)] -> ".\"
@@ -103,7 +103,7 @@
 ## 7. Upload to Google Docs: FULLY FUNCTIONAL
 ### Input:
 	Output Tabelle.xlsx [Part Number, Description, Manufacturer, Hight, Width, Length, Submit Mail, Completed] -> ".\Output Tabelle.xlsx"
-	Google_Drive_Ordner: ITgePA_Rothbaum_Ordner <br />
+	Google_Drive_Ordner: ITgePA_Rothbaum_Ordner
 ### Output:
 	Google Excel Sheet: Spread_Rothbaum_Output_File [Part Number, Description, Manufacturer, Hight, Width, Length, Submit Mail, Completed]
 ### Beschreibung:
