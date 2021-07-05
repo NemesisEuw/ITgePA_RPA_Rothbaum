@@ -1,0 +1,786 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Bearbeitung_in_FreeCAD" sap:VirtualizedContainerService.HintSize="2364,10960" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Diagnostics;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Bearbeitung in FreeCAD" sap:VirtualizedContainerService.HintSize="2374,10795" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="./Output Tabelle Temp.xlsx" Name="Output_Tabelle_Temp_Path" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="Output_Tabelle_Temp_Workbook" />
+      <Variable x:TypeArguments="x:String" Name="Output_Tabelle_Temp_Sheet" />
+      <Variable x:TypeArguments="x:String" Default="E:\Temp Files\User Nemesis\Dropbox\Uni\Semester 6 Winf\IT-gestützte Prozessautomatisierung\RPA_Rothbaum\TestProjekt\Unpacked" Name="Unpacked_Path" />
+      <Variable x:TypeArguments="sco:Collection(sd1:Process)" Name="ListOfProcesses" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2332,192" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_33">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SelectFolder DisplayName="Select Folder" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[Unpacked_Path]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2332,192" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_80">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetProcesses ContinueOnError="{x:Null}" DisplayName="Get Processes" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetProcesses_2" Processes="[ListOfProcesses]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2332,9891" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[Output_Tabelle_Temp_Workbook]" WorkbookPath="[Output_Tabelle_Temp_Path]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="ExcelSequenz" sap:VirtualizedContainerService.HintSize="2298,9782" sap2010:WorkflowViewState.IdRef="Sequence_28">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="Output_Tabelle_Temp_DataTable" />
+              <Variable x:TypeArguments="x:Int32" Default="1" Name="Iterator" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="2256,80" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_6" Index="0" Sheet="[Output_Tabelle_Temp_Sheet]" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[Output_Tabelle_Temp_DataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="2256,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" SheetName="[Output_Tabelle_Temp_Sheet]">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Output_Tabelle_Temp_DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2256,9471" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="ForEach" sap:VirtualizedContainerService.HintSize="2222,9351" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="CellValue" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="2180,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[Iterator]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Iterator+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ExcelReadCell Cell="[&quot;A&quot;+Iterator.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="2180,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="[Output_Tabelle_Temp_Sheet]">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[CellValue]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <If Condition="[String.Equals(CellValue,&quot;Downloaded&quot;)]" sap:VirtualizedContainerService.HintSize="2180,9060" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Working in Excel" sap:VirtualizedContainerService.HintSize="1472,8901" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="PartNumber" />
+                            <Variable x:TypeArguments="ui:Window" Name="ActiveWindow" />
+                            <Variable x:TypeArguments="x:String" Name="ObjX" />
+                            <Variable x:TypeArguments="x:String" Name="ObjY" />
+                            <Variable x:TypeArguments="x:String" Name="ObjWeight" />
+                            <Variable x:TypeArguments="x:String" Name="ObjVolume" />
+                            <Variable x:TypeArguments="x:String" Name="ObjZ" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part Number" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="1430,188" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[CurrentRow]">
+                            <ui:GetRowItem.Value>
+                              <OutArgument x:TypeArguments="x:String">[PartNumber]</OutArgument>
+                            </ui:GetRowItem.Value>
+                          </ui:GetRowItem>
+                          <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Application: FreeCAD 0.19" sap:VirtualizedContainerService.HintSize="1430,7035" sap2010:WorkflowViewState.IdRef="NApplicationCard_16" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Working in FreeCAD" sap:VirtualizedContainerService.HintSize="1396,6743" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1354,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                  <ui:GetActiveWindow ApplicationWindow="[ActiveWindow]" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="1354,192" sap2010:WorkflowViewState.IdRef="GetActiveWindow_3">
+                                    <ui:GetActiveWindow.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MaximizeWindow DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" Window="[ActiveWindow]" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:GetActiveWindow.Body>
+                                  </ui:GetActiveWindow>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1354,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][d(ctrl)]o[u(ctrl)][u(hk)]" />
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1354,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][d(alt)]e[u(alt)][u(hk)]" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1354,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[Unpacked_Path]" />
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1354,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_9" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1354,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][d(ctrl)]f[u(ctrl)][u(hk)]" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1354,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[PartNumber]" />
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1354,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
+                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Öffne Dokument" sap:VirtualizedContainerService.HintSize="1354,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" Version="V1">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Getting Files" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ClickType="Double" DisplayName="Click 'STP-Datei'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_43" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="182, 158, 36, 49" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;wnd aaname='Explorer-Fenster' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Elementansicht' cls='DirectUIHWND' /&gt;&lt;ctrl name='Elementansicht' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer-Fenster' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Elementansicht' cls='DirectUIHWND' /&gt;&lt;ctrl name='Elementansicht' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" ImageBase64="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" InformativeScreenshot="219208063978c6e74dc047b7743574e8.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='#32770' title='Öffne Dokument' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="549, 185, 55, 16" ElementType="Text" FriendlyName="'STP-Datei'" FullSelectorArgument="&lt;wnd aaname='Explorer-Fenster' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Elementansicht' cls='DirectUIHWND' /&gt;&lt;ctrl name='Elementansicht' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl automationid='System.ItemTypeText' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer-Fenster' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Elementansicht' cls='DirectUIHWND' /&gt;&lt;ctrl name='Elementansicht' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl automationid='System.ItemTypeText' role='text' check:text='STP-Datei' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAUCAYAAAAz30VQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFBSURBVFhH7ZRhEsQQDIWdy4Gcx2l6mR4mK5QmPLpmd/9Y34yZRom8iBj6I7bYVdliVwWLPRwZY67h6IhT2dbDek9OzVnyZ3KDOar17GO4YY7Tk+3E0IqNi5PASLB9MRgOVjrT9uktGeupHz7aH0Q7dQig3jdPK5ZvdTrYkV0D/tcJhvxCbHQ6Kq0ncU9Bof8neWsoX656MnEyxaTnAjFJeT4nq39+p0Glw9lJW11jcfNlzGixN3Lt+FyuyHRByH+iI/biypwOAh2asyszHHg78yxWB377y/PVPuX7GqUKav+JsdhAvCmlFonFzjFgvXyz8lslAYkViS3MiD1C9y0LU3np9/ttsWyL6pENMgrKa/G+trf04+k2KF0aEnQodo6p/Dd7735hrCMnyrs0rhxTXcqflvFKbLGrssWuyh+JJXoBTObYVaXkzRQAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="363, 121, 983, 665" FilePath="D:\Programme\FreeCAD\bin\freecad.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVDhPY9BgYLAH4np8mAEfACl4p6HxH4TfomN19f/dIiL/oUqxA5ABb4AKX6qq/n8Bxc9BWEXl/zMgJsoAkObHSkr/98rJgTUg40guLsIGgGy6Ky+PwzYHFgYG8xIGBjMnqAAqABkAsv26jAyaAeq8ENrMNqxi5X8du6JTUL4+A4OpPYQNBCADHigq/r8kKYniBZDT5bQTN4oqhO7Lm3Xqf1jl6v9KBqmHPdNm/jFwKf/KwGDMBTcA5PwzYmL/T4uKwjHIkNyZp/7nzjr9P2Pykf9pEw//T5989H/KhMP/ZbXiNoA1gwDIgNtAm48JCf0H0SB8C+qSzGkn/jvG9n9lYbNpYGCybLeP7vuaCjRIRC54H9AbdkBXsIINuAH0/wF+frAmaQaBXaYGnv89vJP/J/cd+A/WDAVMbLZ1Ua07/oc1bvsfULQUGF5mpWADrkpJ/d/NwwM2ABjixUEly/7Hd+/7H9e5B8UAEDuieft/v4LF/zWs8oCBCnQFyABQAG7l5IQaAHQWMORBzowDGmIb1Qv2AgjbhHd/DajZ+F9BL/kQ1ExIGJwXF/+/no0NagAESKnHbggEKg5r2vY/uG7zf/+q9f8jWnb89yxZ/d85YcofSHQCAcgAUAysYmZGMsCYS9uu8Ktz/OQ/ctoJR7xzF/z3KF71X1A6cJ+kStQGHfsSYDSaWoGVggy4A4zGU0DNyC4A2mAJDA89EEvNPOe0b95CoJyZLVgKlgZAAGgASnaGCqMBUJSBkjMofJABAwMA4SYeWccGirsAAAAASUVORK5CYII=" InformativeScreenshot="6386666fab5bee6e04df4cafd0bbac54.png" Selector="&lt;wnd app='freecad.exe' cls='#32770' title='Öffne Dokument'/&gt;" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1354,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: FreeCAD 0.19" sap:VirtualizedContainerService.HintSize="1354,4750" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" Version="V1">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Getting Values" sap:VirtualizedContainerService.HintSize="1320,4458" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'outline'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NClick_44" KeyModifiers="None" MouseButton="Left">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="10, 164, 381, 293" FriendlyName="'Applikation Unnamed'" FullSelectorArgument="&lt;ctrl role='outline' /&gt;" FuzzySelectorArgument="&lt;ctrl role='outline' automationid='' check:fulltext='Applikation&amp;#xD;&amp;#xA;Unnamed&amp;#xD;&amp;#xA;motor_smh40-103028enl' /&gt;" ImageBase64="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AKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAihECAKAYIQAAiqWGAI1Go9F0NCMSAvv376fRaDSakmYQAjQajaa0Gbt27ZL/BylCh83u/pCJAAAAAElFTkSuQmCC" InformativeScreenshot="72bbac99157c0c49b361dcee6a2e0189.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="12, 464, 375, 310" FriendlyName="'outline'" FullSelectorArgument="&lt;ctrl idx='3' role='outline' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='outline' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][k(up)][u(hk)][d(hk)][k(up)][u(hk)][d(hk)][k(down)][u(hk)][d(hk)][k(down)][u(hk)]" />
+                                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1278,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'FCInfo'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NClick_45" KeyModifiers="None" MouseButton="Left">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1049, 93, 46, 19" ElementType="Button" FriendlyName="'FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;&lt;ctrl name='FCInfo' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;&lt;ctrl name='FCInfo' role='push button' automationid='' check:fulltext='FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAXCAYAAABJXhw0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADrSURBVFhH7ZTbDcMgDAA9FfN4G4ZhF2ZhA7cYKJQ6vKQqtOLjpMYPhYtNwTlH/8AR2Y0jshtHZDfuFzFIAMCgEfKDtEWsJhVfkkEyKV8cgkFT9RS1IoYQFGkr5eboiyhNVshZrT4OajA+N/reYOme7BiLIpa0anzJsi/+1pgnF1bITyPHwNezWIrNCa6tFscbL6pFnn2v/ffrWEmGDxXEUh1P3K8q5/qsTeQqnqhFytqrnFQ3MZXF1epc0t4BpZxU932RicsuHVDM3bFakSBT3B/p73dYJD6XvSk+QFvkhzgiu3FEduOI7IWjB9lqLycYH5kDAAAAAElFTkSuQmCC" InformativeScreenshot="5cdd93bcf215cee3a69a18d8813a8cf0.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1006, 88, 31, 30" ElementType="Button" FriendlyName="'Verkleinern'" FullSelectorArgument="&lt;ctrl name='Navigation' role='tool bar' /&gt;&lt;ctrl name='Verkleinern' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Navigation' role='tool bar' /&gt;&lt;ctrl name='Verkleinern' role='push button' automationid='' check:fulltext='Verkleinern' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVFhH7ZRbioQwEEV72f64DhEREVFEVFQUEbfj+72DaipQMjMkPTTtgAMRjoipqnsIxgfc5KqqCh7HccAdkDIipIwIKSNCyoiQMiL+l8y+75fCyyBeyqRpCoqigKqql4CzcCYvC3kpE0UReJ4HdV1zwWakLEtGURSMPM8ZWZYxkiRh4CycyctC3pL5Gk6hFBbHMYRhCL7vsx7XdcFxHLBtGyzLAtM0r5ERBQdBcIZjMELBhmGArusMTdMYl8rwtp7ESI4EeXwkc6sPGMHjuG0bLMsC8zwzxnGEYRig73vouu4b+A7XsIbqsRdnfHS0CRy0rusphEEk0rYtNE3DwGcSwpppmk4Z7L9EhqAfF8mR4E9ojXbjNwniLZm/RsqIkDIipIwIKSPifjJ4uwcVPAEDGw1hcSDqQQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '0'" sap:VirtualizedContainerService.HintSize="1278,811" sap2010:WorkflowViewState.IdRef="NCheckState_4" Timeout="1">
+                                            <uix:NCheckState.IfExists>
+                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NClick ClickType="Single" DisplayName="Click '0'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_53" KeyModifiers="None" MouseButton="Left">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='0' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dFRihphEATgPapnyUtecy8v4w02TDUD9uyw/tO4BMInFD2WxSfox+Px+Hx3Pn79/vP5zgTd9e21P08Dzf0P0dvtdto/5xK6gXvOPt+zjD6Dr+Al9Agd3x9zCX3V7VlGj913/aU/ajXQ3J9H7/f7OFAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDo6Xg1UCgUCoVCoafj1UChUCgUCoWejlcDhUKhUCgUejpeDRQKhUKhUOjpeDVQKBQKhUKhp+PVQKEn6P48DTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutIrttT9PA82FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtM8u/Q2+32pfuuX0aPwFm35xK6I8f3xyz/ps/Qd+CWS3/UCrjlErrlFbjlMroSaO7PoNvDOxP0+Zvek8fnX9+7+k1cYY5nAAAAAElFTkSuQmCC" InformativeScreenshot="4652ca7950e9e37941a417c5b6e93d4d.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                </uix:NClick>
+                                              </Sequence>
+                                            </uix:NCheckState.IfExists>
+                                            <uix:NCheckState.IfNotExists>
+                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="848,583" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '382'" sap:VirtualizedContainerService.HintSize="806,489" sap2010:WorkflowViewState.IdRef="NCheckState_3" Timeout="1">
+                                                  <uix:NCheckState.IfExists>
+                                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,261" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ClickType="Single" DisplayName="Click '382'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_54" KeyModifiers="None" MouseButton="Left">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'382'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='382' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dHBbdtQEARQl6pacsk1jbkXdaCAs2CipQn7cyEfEjwBg6VGgydAervf749X5+3Hz1+PVyborm+v/XkaaO5/iN5ut9P+OZfQDdxz9vmeZfQZ/ApeQo/Q8f0xl9Cvuj3L6LH7rL/0R60GmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmfj/6/v4+DhQKhUKhUOjpeDVQKBQKhUKhp+PVQKFQKBQKhZ6OVwOFQqFQKBR6Ol4NFAqFQqFQ6Ol4NVAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDon99nks2A5kL/ovvzNNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKr+LfR2+32ofusX0aPwFm35xK6I8f3xyz/ps/QZ+CWS3/UCrjlErrlK3DLZXQl0NzvQbeHVybo8ze9JvfHb9q2S+y3LIHPAAAAAElFTkSuQmCC" InformativeScreenshot="7ae4211e507d173fd2149dc5bca631ea.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfExists>
+                                                  <uix:NCheckState.IfNotExists>
+                                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,261" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ClickType="Single" DisplayName="Click '1021'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_55" KeyModifiers="None" MouseButton="Left">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'1021'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='1021' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVHhe7dFBjtpQEATQOSpnySbbXIy7cIOJXC1LtGMN3x1mM3pIpTZF6SHBx+Px+Hx3Pn79/vP5zgTd9e21P08Dzf2B6O12O+2fcwndwD1nn+9ZRp/BV/ASeoSO74+5hL7q9iyjx+6r/tIftRpoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4Dm/k+gudAqvg293+/jQKFQKBQKhZ6OVwOFQqFQKBR6Ol4NFAqFQqFQ6Ol4NVAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDo6Xg1UCgUCoVCoafj1UChUCgUCoWejlcDhZ6g+/M00Nwfgt5ut3+6r/pl9AicdXsuoTtyfH/M8m/6DH0Fbrn0R62AWy6hW16BWy6jK4Hmfg+6PbwzQZ+/6T15fP4FIVxL7B3gWmIAAAAASUVORK5CYII=" InformativeScreenshot="f9ca869accc7785dcf1cdcc60b28d178.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfNotExists>
+                                                  <uix:NCheckState.Target>
+                                                    <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'382'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='382' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dHBbdtQEARQl6pacsk1jbkXdaCAs2CipQn7cyEfEjwBg6VGgydAervf749X5+3Hz1+PVyborm+v/XkaaO5/iN5ut9P+OZfQDdxz9vmeZfQZ/ApeQo/Q8f0xl9Cvuj3L6LH7rL/0R60GmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmfj/6/v4+DhQKhUKhUOjpeDVQKBQKhUKhp+PVQKFQKBQKhZ6OVwOFQqFQKBR6Ol4NFAqFQqFQ6Ol4NVAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDon99nks2A5kL/ovvzNNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKr+LfR2+32ofusX0aPwFm35xK6I8f3xyz/ps/QZ+CWS3/UCrjlErrlK3DLZXQl0NzvQbeHVybo8ze9JvfHb9q2S+y3LIHPAAAAAElFTkSuQmCC" InformativeScreenshot="35079d8b78c1918978ffc48b649be71b.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NCheckState.Target>
+                                                </uix:NCheckState>
+                                              </Sequence>
+                                            </uix:NCheckState.IfNotExists>
+                                            <uix:NCheckState.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='0' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dFRihphEATgPapnyUteczHv4g02TDUD9uyw/tO4BMInFD2WxSfox+Px+Hx3Pn79/vP5zgTd9e21P08Dzf0P0dvtdto/5xK6gXvOPt+zjD6Dr+Al9Agd3x9zCX3V7VlGj913/aU/ajXQ3J9H7/f7OFAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDo6Xg1UCgUCoVCoafj1UChUCgUCoWejlcDhUKhUCgUejpeDRQKhUKhUOjpeDVQKBQKhUKhp+PVQKEn6P48DTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutIrttT9PA82FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtM8u/Q2+32pfuuX0aPwFm35xK6I8f3xyz/ps/Qd+CWS3/UCrjlErrlFbjlMroSaO7PoNvDOxP0+Zvek8fnX3uSS+xwfOW+AAAAAElFTkSuQmCC" InformativeScreenshot="3b549f3884e3feda64c451a421d94d46.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NCheckState.Target>
+                                          </uix:NCheckState>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1278,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)][k(pgup)][u(hk)][d(hk)][k(pgup)][u(hk)]" />
+                                          <uix:NGetText DisplayName="Get Text 'Weight'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NGetText_6">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1571, 890, 311, 20" ElementType="InputBox" FriendlyName="'1898.6312243699156 g'" FullSelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl idx='4' name='Surface and Volume' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl automationid='' name='Surface and Volume' role='editable text' /&gt;" InformativeScreenshot="32ccb592bff0d12510248884c7f91be7.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1471, 890, 94, 20" ElementType="Text" FriendlyName="'Weight'" FullSelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl name='Weight' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl name='Weight' role='text' automationid='' check:text='Weight' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAYCAYAAAABHCipAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVGhD7ZbhbcQwCIU9ledhGw/jXTxLNqBgG5u4d0mk9lok8+NTLkBy0nsYEo7jQOf/cSOM4EYYwY0wghthBDfCCG6EEdwII/yNESVhjAnLq5xTGUachGLhQsRUpDAjBMAs+ZU7oa/yblJlGKGFLimSOBEh98KfiuVG3DKMyDBPQAYyJQPGVFqh/s3ChYCh0p/RYp7yBMd7PsGMN5MLpjhj4z82ZBhRT0EVgsQBFpXGURc3k4BNuGVEiQHDCM5L7ZLXcTK2GqRr5J2bMpc1CwJ5Xmu3suhy7TW9eyeUEzFXUe/i6++NmUZIt1O3SueWBDR65sl4K5rEdafr+Pqcvn/3zs1QRrQ9wUt6fC3xbqD7ObuX0SMMMTmvnn9qxNUX2SacjOA98a2jV+F7bIymVWg+FVd5eYe65x3Etb6sPwWbUvfNi5xz4teNkO5u+Mh5ymdPhPMYN8IIboQR3AgjuBEmOPALD+j3/pI0W9UAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                            <uix:NGetText.Text>
+                                              <OutArgument x:TypeArguments="x:String">[ObjWeight]</OutArgument>
+                                            </uix:NGetText.Text>
+                                          </uix:NGetText>
+                                          <uix:NGetText DisplayName="Get Text 'Volume of the form'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NGetText_7">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1571, 838, 311, 20" ElementType="InputBox" FriendlyName="'1898631.2243699157 mm3'" FullSelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl idx='3' name='Surface and Volume' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl automationid='' name='Surface and Volume' role='editable text' /&gt;" InformativeScreenshot="24fe58df671c4fe6cc61447d834e1034.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1471, 838, 94, 20" ElementType="Text" FriendlyName="'Volume of the form'" FullSelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl name='Volume of the form' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Surface and Volume' role='grouping' /&gt;&lt;ctrl name='Volume of the form' role='text' automationid='' check:text='Volume of the form' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAYCAYAAAABHCipAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVGhD7ZXLlcMgDEXHVVEPRaQGiqEX1+IOGCRbWOgI7GTImIUW9wTQFx7EP9u2JeN5TIhJMCEmwYSYBBNiEkyISTAhJsGEmITPhFhDci6kVbP9F9GnZVkQHxU7MKLPO3UGUISoG15TcC6F9XSseFyImPzS6I/39uc+O3UGU4SoDv5qA08LAfUXn2LLNkqIXp3BFCHW4JIL627Iz7GMsZn9aS7UFG1QbrRa98k7etLwwsTzrvJ2bnfxoQOBW0prmeqgzzqAe72wn+DPtfv1lTpaP7hXqpHXcH6xd4XzGwH/hT7iOOake9DeDCUAsdDnKN4VgjaH/7FsjP6Ql900mQdp1G76H3Ab9sEO4K36cr1zFrwGznt7P/wE7GNNzYGCtdolGIuQ6nlds8t1bQy/ufly2xB2MDKO5uQjbRxu03Lcrc/95Zjm/CyuYqSfgAkBLyGrF3NA6+bBfJQQPE5D+sB8pBCteM5Vrm8JsT8l9sx6zxGSwi+7SWin9W4zdV6dRm2w8ZwS3pP0e6t+poq/OAstpjVWqIXAYufBIpAgN1A9X5YUGzrszuePPKzfaabKm6F1TuXD+uJ5FOAbh/0cH+vi90l9GV9irsTujBWEEMZTmBCTYEJMggkxCSbEJJgQk2BCTMGWfgGXNLEPi39V/QAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                            <uix:NGetText.Text>
+                                              <OutArgument x:TypeArguments="x:String">[ObjVolume]</OutArgument>
+                                            </uix:NGetText.Text>
+                                          </uix:NGetText>
+                                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '0'" sap:VirtualizedContainerService.HintSize="1278,811" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="1">
+                                            <uix:NCheckState.IfExists>
+                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NClick ClickType="Single" DisplayName="Click '0'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='0' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dFRihphEATgPapnyUtecy8v4w02TDUD9uyw/tO4BMInFD2WxSfox+Px+Hx3Pn79/vP5zgTd9e21P08Dzf0P0dvtdto/5xK6gXvOPt+zjD6Dr+Al9Agd3x9zCX3V7VlGj913/aU/ajXQ3J9H7/f7OFAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDo6Xg1UCgUCoVCoafj1UChUCgUCoWejlcDhUKhUCgUejpeDRQKhUKhUOjpeDVQKBQKhUKhp+PVQKEn6P48DTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutIrttT9PA82FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtM8u/Q2+32pfuuX0aPwFm35xK6I8f3xyz/ps/Qd+CWS3/UCrjlErrlFbjlMroSaO7PoNvDOxP0+Zvek8fnX9+7+k1cYY5nAAAAAElFTkSuQmCC" InformativeScreenshot="4652ca7950e9e37941a417c5b6e93d4d.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                </uix:NClick>
+                                              </Sequence>
+                                            </uix:NCheckState.IfExists>
+                                            <uix:NCheckState.IfNotExists>
+                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="848,583" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '382'" sap:VirtualizedContainerService.HintSize="806,489" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="1">
+                                                  <uix:NCheckState.IfExists>
+                                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,261" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ClickType="Single" DisplayName="Click '382'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'382'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='382' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dHBbdtQEARQl6pacsk1jbkXdaCAs2CipQn7cyEfEjwBg6VGgydAervf749X5+3Hz1+PVyborm+v/XkaaO5/iN5ut9P+OZfQDdxz9vmeZfQZ/ApeQo/Q8f0xl9Cvuj3L6LH7rL/0R60GmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmfj/6/v4+DhQKhUKhUOjpeDVQKBQKhUKhp+PVQKFQKBQKhZ6OVwOFQqFQKBR6Ol4NFAqFQqFQ6Ol4NVAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDon99nks2A5kL/ovvzNNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKr+LfR2+32ofusX0aPwFm35xK6I8f3xyz/ps/QZ+CWS3/UCrjlErrlK3DLZXQl0NzvQbeHVybo8ze9JvfHb9q2S+y3LIHPAAAAAElFTkSuQmCC" InformativeScreenshot="7ae4211e507d173fd2149dc5bca631ea.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfExists>
+                                                  <uix:NCheckState.IfNotExists>
+                                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,261" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ClickType="Single" DisplayName="Click '1021'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_52" KeyModifiers="None" MouseButton="Left">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'1021'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='1021' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVHhe7dFBjtpQEATQOSpnySbbXIy7cIOJXC1LtGMN3x1mM3pIpTZF6SHBx+Px+Hx3Pn79/vP5zgTd9e21P08Dzf2B6O12O+2fcwndwD1nn+9ZRp/BV/ASeoSO74+5hL7q9iyjx+6r/tIftRpoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4Dm/k+gudAqvg293+/jQKFQKBQKhZ6OVwOFQqFQKBR6Ol4NFAqFQqFQ6Ol4NVAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDo6Xg1UCgUCoVCoafj1UChUCgUCoWejlcDhZ6g+/M00Nwfgt5ut3+6r/pl9AicdXsuoTtyfH/M8m/6DH0Fbrn0R62AWy6hW16BWy6jK4Hmfg+6PbwzQZ+/6T15fP4FIVxL7B3gWmIAAAAASUVORK5CYII=" InformativeScreenshot="f9ca869accc7785dcf1cdcc60b28d178.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfNotExists>
+                                                  <uix:NCheckState.Target>
+                                                    <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'382'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='382' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dHBbdtQEARQl6pacsk1jbkXdaCAs2CipQn7cyEfEjwBg6VGgydAervf749X5+3Hz1+PVyborm+v/XkaaO5/iN5ut9P+OZfQDdxz9vmeZfQZ/ApeQo/Q8f0xl9Cvuj3L6LH7rL/0R60GmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmfj/6/v4+DhQKhUKhUOjpeDVQKBQKhUKhp+PVQKFQKBQKhZ6OVwOFQqFQKBR6Ol4NFAqFQqFQ6Ol4NVAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDon99nks2A5kL/ovvzNNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtMAs2FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKr+LfR2+32ofusX0aPwFm35xK6I8f3xyz/ps/QZ+CWS3/UCrjlErrlK3DLZXQl0NzvQbeHVybo8ze9JvfHb9q2S+y3LIHPAAAAAElFTkSuQmCC" InformativeScreenshot="35079d8b78c1918978ffc48b649be71b.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NCheckState.Target>
+                                                </uix:NCheckState>
+                                              </Sequence>
+                                            </uix:NCheckState.IfNotExists>
+                                            <uix:NCheckState.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1901, 152, 17, 639" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl idx='3' role='scroll bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='scroll bar' check:text='0' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAKDCAYAAAD1t0HhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVHhe7dFRihphEATgPapnyUteczHv4g02TDUD9uyw/tO4BMInFD2WxSfox+Px+Hx3Pn79/vP5zgTd9e21P08Dzf0P0dvtdto/5xK6gXvOPt+zjD6Dr+Al9Agd3x9zCX3V7VlGj913/aU/ajXQ3J9H7/f7OFAoFAqFQqGn49VAoVAoFAqFno5XA4VCoVAoFHo6Xg0UCoVCoVDo6Xg1UCgUCoVCoafj1UChUCgUCoWejlcDhUKhUCgUejpeDRQKhUKhUOjpeDVQKBQKhUKhp+PVQKEn6P48DTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutIrttT9PA82FVgFtg0mgudAqoG0wCTQXWgW0DSaB5kKrgLbBJNBcaBXQNpgEmgutAtoGk0BzoVVA22ASaC60CmgbTALNhVYBbYNJoLnQKqBtMAk0F1oFtA0mgeZCq4C2wSTQXGgV0DaYBJoLrQLaBpNAc6FVQNtgEmgutApoG0wCzYVWAW2DSaC50CqgbTAJNBdaBbQNJoHmQquAtsEk0FxoFdA2mASaC60C2gaTQHOhVUDbYBJoLrQKaBtM8u/Q2+32pfuuX0aPwFm35xK6I8f3xyz/ps/Qd+CWS3/UCrjlErrlFbjlMroSaO7PoNvDOxP0+Zvek8fnX3uSS+xwfOW+AAAAAElFTkSuQmCC" InformativeScreenshot="3b549f3884e3feda64c451a421d94d46.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1039, 86, 889, 34" ElementType="Toolbar" FriendlyName="'Custom1 FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' automationid='' check:fulltext='Custom1&amp;#xD;&amp;#xA;FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA30AAAAmCAYAAABwK/IQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK/SURBVHhe7d1BbtpQFAVQJwIMoa3SplIXEon1MOlaWAwbSDbBHrKDjDNx8w2PONR2Quu0tnWudCTwt8foYj//7PHxsQAAAGA8Ivnkssju7+8LAAAAxiNSlr70oXpQRERERERExpF8+lz60q2/KH2ntwQBAAAYnojSBwAAMEKR2eSivvQ9PT2V4jsAAADDESln+tKButL38PBQ3N3dvboQAACA/os0lr4kFT6lDwAAYHgiraUPAACAYYosml7kYqYPAABguCILM30AAADjE5mb6QMAABifSGvpAwAAYJgirVs2mOkDAAAYpshsUDN923WRZVlpva1ZBwAAoBSZTS46munbbYrVoZC9WBfbWK8UttJ6e3JN5dxa22KdrYrNrm4NAACAqsi0rfSdJRW41abY1aztNqvfSt12ffject0rZUF8qxgCAACQRFof7zxrpq+xvO2KzarlDl31usPnzfrljuD+Mc50l+/lWJbOL0tgHFMGAQAAqiKNj3eePdP3qoRVylh5vKWUnZa+5+uO83rpkdCTQrgvlfsSGOeVdxLT46LlGgAAAJFuZ/qOpewdx8Np6aue27RWd567fQAAAEeR+fTDZ/reeAHLW2Wubq3uPKUPAADgKLLMP3ym74wXudSVudo1j3cCAAC0iSzzLmf6Gkpfsi9+lXm/ui0b3l36Dt+r18ZxAAAAyn6Xcr3oaqYPAACA3oj8+NzVTB8AAAC9Ebm5yjqa6QMAAKA3It+XLaXvrJk+AAAAeiNyszTTBwAAMDqR5axhywYAAACGK5JPutqnDwAAgN6IdLdPHwAAAL0Rub4y0wcAADA6kW+fGt7eCQAAwHBFvjZt2QAAAMBwRb4sWh7vBAAAYJgiV/llkaXCBwAAwHhE5mmfvtvbnwUA/Im6fxYBgP8vMp8qfQD8hdMfmLp/GgGAfy+STy+LXzB3JaWUpgaXAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NCheckState.Target>
+                                          </uix:NCheckState>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1278,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" Shortcuts="[d(hk)][k(pgdn)][u(hk)]" />
+                                          <uix:NGetText DisplayName="Get Text 'XLength'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NGetText_8">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1471, 191, 98, 20" ElementType="InputBox" FriendlyName="'110.00000000000097 mm'" FullSelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='BoundBox' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='BoundBox' role='editable text' automationid='' /&gt;" InformativeScreenshot="aab4420a812110295fe72aef1c86857d.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="Selector, FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1471, 172, 98, 13" ElementType="Text" FriendlyName="'XLength'" FullSelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='XLength' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='XLength' role='text' automationid='' check:text='XLength' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAARCAYAAAAv+NkbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhH7ZbBEcQgCEWtynosIj1YjL1YSzpgJQFiDGZz2awzcngzgpjD/wpx67qCMR5mzKCYMYNixgzKOMbkCN5HyNrehIgxzgVIspEgYPxrservmzEnxJgUHPiYt3WOHkIqeTPmb1StDF+Jh5geiIV558orQ8qZfNTGYvCed7u5l/rC9s0M0R85vyz98xNymjH4UkRozKnGUJvjmGtIfBEzBTIA6xuT+JvtWj1P8WSchz+K8c0YEpBv9Y4yjzju5e/WWjwZTSsrAtc3VROnJ1hP2Pbm13W9tRZPhhgjA596/7ZWxWlaE9MVlmaX9gpxzW2xe57iyRBjLrea21PbsmS/yuPZO2G3FtnUUx3+DWKOh796fkLOM+YN0KSQ9D1DeMUYfhU79OqMW95/McYjzJghWeEDOACufJ2d42sAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                            <uix:NGetText.Text>
+                                              <OutArgument x:TypeArguments="x:String">[ObjX]</OutArgument>
+                                            </uix:NGetText.Text>
+                                          </uix:NGetText>
+                                          <uix:NGetText DisplayName="Get Text 'YLength'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NGetText_9">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1575, 191, 98, 20" ElementType="InputBox" FriendlyName="'131.5 mm'" FullSelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl idx='2' name='BoundBox' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl automationid='' name='BoundBox' role='editable text' /&gt;" InformativeScreenshot="c7dcc51ed0fbe4da63b6565336b8618a.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1575, 172, 98, 13" ElementType="Text" FriendlyName="'YLength'" FullSelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='YLength' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='YLength' role='text' automationid='' check:text='YLength' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAARCAYAAAAv+NkbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEgSURBVFhH7ZbLDcMgDECZinkYIjswDKcuwixs4MYJ5lc7/UiNkPDhqeDYHPxCXJNSAmU+VMykqJhJUTGTMo+Y6MFaD5F7tiBFjGmbgk0yFvzjz81qZaiYjiImOAMu1LX18f/NUjEi9VNGjcFf4yC0Mcppc40Bc7DfrFhz/S71jFfRff7OcWYEb2vMbptcvyDdjDluirV9Q1/EBHAkrs3JzS+1wWUBmD9IojPHNVuf94vRD/+2UdyeYvmNruyipNqrM6U1t1+M38RwDZNqxze/zZPW3H4xvhczfpoIsRbz8xwa83AtzbNxvxjvxYyfLC6ONVeNxVsz5uc8nGsYo+HP1i9IL+YOUJIL/DOlcIsYuhUnzT86ReT+G6N8hIqZkgRPdhK3HYUyVGwAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                            <uix:NGetText.Text>
+                                              <OutArgument x:TypeArguments="x:String">[ObjY]</OutArgument>
+                                            </uix:NGetText.Text>
+                                          </uix:NGetText>
+                                          <uix:NGetText DisplayName="Get Text 'ZLength'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NGetText_10">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1679, 191, 99, 20" ElementType="InputBox" FriendlyName="'209.99999999999966 mm'" FullSelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl idx='3' name='BoundBox' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl automationid='' name='BoundBox' role='editable text' /&gt;" InformativeScreenshot="7118d890d00384c89ff60c67fbc4b447.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="FuzzySelector">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1679, 172, 99, 13" ElementType="Text" FriendlyName="'ZLength'" FullSelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='ZLength' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='BoundBox' role='grouping' /&gt;&lt;ctrl name='ZLength' role='text' automationid='' check:text='ZLength' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGcAAAARCAYAAADAOrIlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEjSURBVFhH7ZbBEYQgDEWpinoowh4ohtM2Qi10kDUuwRgDsxcdZsjhzUCMHv4zDK6UAsacmJyJMTkTY3ImZh45OYL3EbL2bFGanOgdOMfxED8PB8aFmJwb+uSkAA6DejowkzNEkZMg4NTkfd0LDOt8wlhvDOf0haT17xzfzJdp9dvWf39RbnLSHo6P+bdX5aC8AIn21FMFtEBp+o5+IYq+Kdfq+3W/IFc5MhAeHq/VP/tklyV7ad+rj9bafkGYHHacUU0LqBdaL9yR8N5a2y9Ik3M5zgg1IHFMEd1whXTeh2s6Irvv1/2CNDkYuHpUyRr2yzqGOAoXp0f21z78KbBGFwKTc3K7EDwOigpJf2ZceEUOTccPdtMzhrw/OcbfmJxpKfAFuLnqOhn0erYAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                            <uix:NGetText.Text>
+                                              <OutArgument x:TypeArguments="x:String">[ObjZ]</OutArgument>
+                                            </uix:NGetText.Text>
+                                          </uix:NGetText>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1278,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" Shortcuts="[d(hk)][d(ctrl)][k(f4)][u(ctrl)][u(hk)]" />
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Verwerfen'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NClick_49" KeyModifiers="None" MouseButton="Left">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="341, 122, 75, 23" ElementType="Button" FriendlyName="'Verwerfen'" FullSelectorArgument="&lt;ctrl name='Verwerfen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Verwerfen' role='push button' automationid='' check:fulltext='Verwerfen' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVGhD7ZRBlcQgDEDxhIHRgYw1gBUMVARS6qAOskALDQwzsCSvl83hHxpIgA+pOo4DhDVEHgGRR6CSt22bMAD7epO377vwAZFHQOQREHkERB4BFnnOKNDW13FnQBlXx54irq0UKG3B98aZ4Hl5HVFRqHFozmM4MEHcE2vzyPMWtDLgSiweAH8/SVxbg/W9MV545O0erEa3jV9iEhtaKJGFngc0RqfYT/VKm8PH/OlaL3iVcfQr+ZJn7dXieP4kTPJ28FaXxe+WbUQEqeecGEebxbLjHH3XuutO1mrnDfLwurfYOdjkpdtNP+j4Cq/NVjd+kTbbHKjkRvEh7gi1erVX8ibgk5cPWg4eYmnjvdtsN5olhXiRFvKQ1Plazfdq3gSM8s4Wizdbt1DvX/K+0dSeTbsak1ss58zU6n2v5I1hlXfecrOBFBu1TJ6HYsu1PtVeyBvAK++fIfIIiDwCIo+AyCMwlCd8B/uq5Al/Q+QREHnLHPALDk/vnCJIEtYAAAAASUVORK5CYII=" InformativeScreenshot="9114720daa892606f584cf116790cb5b.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='Nicht gespeichertes Dokument' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="260, 122, 75, 23" ElementType="Button" FriendlyName="'Speichern'" FullSelectorArgument="&lt;ctrl name='Speichern' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Speichern' role='push button' automationid='' check:fulltext='Speichern' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVGhD7ZTJkcQgDADJiWyIZH+kQipEsW9n4Aw0XAbECF/grVqXHv0QyBrUIxDrugJzD5Y3AMsbAMkTP7/MAcgXCohkBoN8oSAlLMvCNLC8AVjeACxvgLnyjAIhREKBoXLOYDVIIUFbYi9jQB3mPMs8eaHhSpiLtan2p/MmeX7qpAZL7T3Cm+SFZgRIbYl116TxkxmvNMoJE9te9VaMBS23HAEqTPT9ukrJtJZq6PLcfJ+/z0R5ntJkbNDjD+jWtqlE71kjyU1vPHy9HmvSf0pVN7y3Hfmobl0r1VAm5115qyfLS6R/HU1InqIFjEp7aDoSoZHqm5BDNdTWbb85qHtUI/9On2fkOax2V4M8cJykIu9AzG15F78h433myXNvT/nR+qr5A1VXBTXW7GXqJvauba/xM3XPxPvMk5cOjK/Jtr490nGvvIeO9op1r1fJoZ+DJj5ddy/eZ6K8HtcO9J9geQOwvAH+QN57OS2P6YN8oYBIZjDIVx0w12B5A7C826zwAeeQeto2feQQAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'FCInfo'" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="NClick_50" KeyModifiers="None" MouseButton="Left">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1049, 93, 46, 19" ElementType="Button" FriendlyName="'FCInfo'" FullSelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;&lt;ctrl name='FCInfo' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Custom1' role='tool bar' /&gt;&lt;ctrl name='FCInfo' role='push button' automationid='' check:fulltext='FCInfo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAXCAYAAABJXhw0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADrSURBVFhH7ZTbDcMgDAA9FfN4G4ZhF2ZhA7cYKJQ6vKQqtOLjpMYPhYtNwTlH/8AR2Y0jshtHZDfuFzFIAMCgEfKDtEWsJhVfkkEyKV8cgkFT9RS1IoYQFGkr5eboiyhNVshZrT4OajA+N/reYOme7BiLIpa0anzJsi/+1pgnF1bITyPHwNezWIrNCa6tFscbL6pFnn2v/ffrWEmGDxXEUh1P3K8q5/qsTeQqnqhFytqrnFQ3MZXF1epc0t4BpZxU932RicsuHVDM3bFakSBT3B/p73dYJD6XvSk+QFvkhzgiu3FEduOI7IWjB9lqLycYH5kDAAAAAElFTkSuQmCC" InformativeScreenshot="5cdd93bcf215cee3a69a18d8813a8cf0.png" ScopeSelectorArgument="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="1006, 88, 31, 30" ElementType="Button" FriendlyName="'Verkleinern'" FullSelectorArgument="&lt;ctrl name='Navigation' role='tool bar' /&gt;&lt;ctrl name='Verkleinern' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Navigation' role='tool bar' /&gt;&lt;ctrl name='Verkleinern' role='push button' automationid='' check:fulltext='Verkleinern' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVFhH7ZRbioQwEEV72f64DhEREVFEVFQUEbfj+72DaipQMjMkPTTtgAMRjoipqnsIxgfc5KqqCh7HccAdkDIipIwIKSNCyoiQMiL+l8y+75fCyyBeyqRpCoqigKqql4CzcCYvC3kpE0UReJ4HdV1zwWakLEtGURSMPM8ZWZYxkiRh4CycyctC3pL5Gk6hFBbHMYRhCL7vsx7XdcFxHLBtGyzLAtM0r5ERBQdBcIZjMELBhmGArusMTdMYl8rwtp7ESI4EeXwkc6sPGMHjuG0bLMsC8zwzxnGEYRig73vouu4b+A7XsIbqsRdnfHS0CRy0rusphEEk0rYtNE3DwGcSwpppmk4Z7L9EhqAfF8mR4E9ojXbjNwniLZm/RsqIkDIipIwIKSPifjJ4uwcVPAEDGw1hcSDqQQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="D:\Programme\FreeCAD\bin\freecad.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVJSURBVFhHzZZ7UFR1FMfvEsQG7MgsT0EcQXk6YWTsZSM0HgMpNKbMAD55Lg95aNTgHzpqGiE+QOQlT0cbG6OJycckUJphKu9yytKmsphKKpkms/5qOp3z8/e7y667tRJ/+J35DHvvPfec7z2/3z0X6aFQiCTB/4Wnmp4owa+hodNmxgxMhoQYCQ6G2xb4ZSpBQTNr4GdMaM5PgsBAhYkpzKgBSniLWLDAhB/N+IGYP58xowZE0u95YluZMQPjAQEw7u8P3yEisa3wVNMTJaCCN+fNU5iRJ7NVwsBXc+cqPJgBnZukkm9KKt1d/PuXJIW58Au2SRi44een8GAGItPDojdBeecYLIqvwHt0efyCbRIGPvf1VbBuINwTC/rxAy5dR3JRK5Qf+RjW7z6N98gD/AJK74vHx7A74/ffxyUMfObjA58Ss2crBqyBSVsx4UJJWuyObZ8oab4CmztG4UXsgpd/Gl3fhex3dIq9G7uuBpYVtADGkQlvXtYoSkgFr3p7wyccOrYGxSdk1oHWZwU8+thSiEmvZoU3Ng9AaeswGA6ch8jkHch2KG68DGVtw1DaMggqu6g/2X4xlzAw5uUFY56eMGrGyBSEAfG01Pay9hHY2DQARVisoOEexYcHsegQZB24AIV4PnZ9LXWlhZc0lTAw7OGhMCRwd2cMcoSBYnxaKlSIlLYOwSY0kVXVA+teOcV+k6E1r/VBxqs9sLl9FFy9n0cDtGQWJAwMuLkpXDHjMkcYKGsbgZzaD1mxxNwmUGviaI2/RO484hANCdkN2IFhyKjsYZ1yUC9BAxbaTxIGLmm1CnRsDdYBbDGteWJeE7X2CySMp0PJ4XQuIacRcmv7Ib/+I9CvrCSDE3i+E42skaQIDx5sNNDv6qogClkjpwafHrugdsEnNykuJIc5auLZBnxh20nWsfy6fkgyNEOQXEJmvuWBRgMfzJqlIAywAJV8e+GSclzf09jyUcg92A9rq96D7D19mEh3g8VYkkq+mlnVC8kVb0NM4VFIKn8T980lND5MBn7nUUYD5zQaeJ9jZuAOPS21PX13D6zY+g6k7ToLWcyAfI3FWJJKdz1zTy8893IX24y0WdO3dUMITk28b5JHGQ30ubgwep2dzQzovg6KKoZl+S1QhE9A73rqjjOsrWpsMw6jx1mciSIX0sak2JQt3fiG9IJ2zkpaLpySkQZJCtbwQKOBs05OjHcREwM07SQ5g0YuOr+lX1UJeXUXYcO+80AbDc/jMkx9xciQ7np8VgN27CysxdcxInErxe3kAaYSBs6o1QqmBqZKr7V3jGGDKOmlLram8dmN9zYjthy5Rl2h4nkHL0L46nrIxmEUkUQG5P08iamEgZOOjgrWDchhGo/lf5dha582dIKc06asL204giYgLdGzxa9DeEY9yNntkI8b10G9FDfeIvw4mUkY6HZwUPgXA60xGftY0bjS41DUdAUycSkSy09AdP4RZoiMbdh7jg0gMrZq+yk2D55J20tdOMYTGSUMvGVvr2DZwGJ3+qAUY9GC+ktgqL0A4XEVjEwcw/TUASnVbEA9lbIT7Oz14KxNAn1qFRTiMIrLPEQGRnkyo4SBE3Z2CpYN4P8COECi06ohCicb7gVsqVyLm6vSxX05lGDrn1x/GPJqLtBrhlNPr5WkqFCMacHjPxD8HMtzeDKjhIE3VCo4TvDj+w2QInyw4BBy9N5vIXkgdUsXezvi8TuAxx38Ahd9Byz8L0ASBsyxbMCaIg2BUaXYhUGY94QB79Ot5hf+W1TIGjzEBkVrsMWTyG/INyYfm4dXkvQPYMBdYn7duEoAAAAASUVORK5CYII=" InformativeScreenshot="35cf13b9337acd03200188c1ea5c3ea5.png" Selector="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19'/&gt;" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="0, 0, 0, 0" FilePath="D:\Programme\FreeCAD\bin\freecad.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVJSURBVFhHzZZ7UFR1FMfvEsQG7MgsT0EcQXk6YWTsZSM0HgMpNKbMAD55Lg95aNTgHzpqGiE+QOQlT0cbG6OJycckUJphKu9yytKmsphKKpkms/5qOp3z8/e7y667tRJ/+J35DHvvPfec7z2/3z0X6aFQiCTB/4Wnmp4owa+hodNmxgxMhoQYCQ6G2xb4ZSpBQTNr4GdMaM5PgsBAhYkpzKgBSniLWLDAhB/N+IGYP58xowZE0u95YluZMQPjAQEw7u8P3yEisa3wVNMTJaCCN+fNU5iRJ7NVwsBXc+cqPJgBnZukkm9KKt1d/PuXJIW58Au2SRi44een8GAGItPDojdBeecYLIqvwHt0efyCbRIGPvf1VbBuINwTC/rxAy5dR3JRK5Qf+RjW7z6N98gD/AJK74vHx7A74/ffxyUMfObjA58Ss2crBqyBSVsx4UJJWuyObZ8oab4CmztG4UXsgpd/Gl3fhex3dIq9G7uuBpYVtADGkQlvXtYoSkgFr3p7wyccOrYGxSdk1oHWZwU8+thSiEmvZoU3Ng9AaeswGA6ch8jkHch2KG68DGVtw1DaMggqu6g/2X4xlzAw5uUFY56eMGrGyBSEAfG01Pay9hHY2DQARVisoOEexYcHsegQZB24AIV4PnZ9LXWlhZc0lTAw7OGhMCRwd2cMcoSBYnxaKlSIlLYOwSY0kVXVA+teOcV+k6E1r/VBxqs9sLl9FFy9n0cDtGQWJAwMuLkpXDHjMkcYKGsbgZzaD1mxxNwmUGviaI2/RO484hANCdkN2IFhyKjsYZ1yUC9BAxbaTxIGLmm1CnRsDdYBbDGteWJeE7X2CySMp0PJ4XQuIacRcmv7Ib/+I9CvrCSDE3i+E42skaQIDx5sNNDv6qogClkjpwafHrugdsEnNykuJIc5auLZBnxh20nWsfy6fkgyNEOQXEJmvuWBRgMfzJqlIAywAJV8e+GSclzf09jyUcg92A9rq96D7D19mEh3g8VYkkq+mlnVC8kVb0NM4VFIKn8T980lND5MBn7nUUYD5zQaeJ9jZuAOPS21PX13D6zY+g6k7ToLWcyAfI3FWJJKdz1zTy8893IX24y0WdO3dUMITk28b5JHGQ30ubgwep2dzQzovg6KKoZl+S1QhE9A73rqjjOsrWpsMw6jx1mciSIX0sak2JQt3fiG9IJ2zkpaLpySkQZJCtbwQKOBs05OjHcREwM07SQ5g0YuOr+lX1UJeXUXYcO+80AbDc/jMkx9xciQ7np8VgN27CysxdcxInErxe3kAaYSBs6o1QqmBqZKr7V3jGGDKOmlLram8dmN9zYjthy5Rl2h4nkHL0L46nrIxmEUkUQG5P08iamEgZOOjgrWDchhGo/lf5dha582dIKc06asL204giYgLdGzxa9DeEY9yNntkI8b10G9FDfeIvw4mUkY6HZwUPgXA60xGftY0bjS41DUdAUycSkSy09AdP4RZoiMbdh7jg0gMrZq+yk2D55J20tdOMYTGSUMvGVvr2DZwGJ3+qAUY9GC+ktgqL0A4XEVjEwcw/TUASnVbEA9lbIT7Oz14KxNAn1qFRTiMIrLPEQGRnkyo4SBE3Z2CpYN4P8COECi06ohCicb7gVsqVyLm6vSxX05lGDrn1x/GPJqLtBrhlNPr5WkqFCMacHjPxD8HMtzeDKjhIE3VCo4TvDj+w2QInyw4BBy9N5vIXkgdUsXezvi8TuAxx38Ahd9Byz8L0ASBsyxbMCaIg2BUaXYhUGY94QB79Ot5hf+W1TIGjzEBkVrsMWTyG/INyYfm4dXkvQPYMBdYn7duEoAAAAASUVORK5CYII=" InformativeScreenshot="30a266d8d786c20c92fcd44f3d0eec03.png" Selector="&lt;wnd app='freecad.exe' cls='Qt*QWindowIcon' title='FreeCAD 0.19'/&gt;" />
+                            </uix:NApplicationCard.TargetApp>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NApplicationCard>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,192" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:GetProcesses ContinueOnError="{x:Null}" DisplayName="Get Processes" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetProcesses_1" Processes="[ListOfProcesses]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                          <ui:ExcelWriteCell Cell="[&quot;E&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1430,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjY]" />
+                          <ui:ExcelWriteCell Cell="[&quot;F&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1430,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjX]" />
+                          <ui:ExcelWriteCell Cell="[&quot;G&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1430,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjZ]" />
+                          <ui:ExcelWriteCell Cell="[&quot;H&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1430,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjVolume]" />
+                          <ui:ExcelWriteCell Cell="[&quot;I&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1430,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjWeight]" />
+                          <ui:ExcelWriteCell Cell="[&quot;A&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1430,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="[Output_Tabelle_Temp_Sheet]" Text="Completed" />
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,52" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteCell Cell="[&quot;E&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjY]" WorkbookPath="[Output_Tabelle_Temp_Path]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteCell Cell="[&quot;F&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjX]" WorkbookPath="[Output_Tabelle_Temp_Path]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,52" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteCell Cell="[&quot;G&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjZ]" WorkbookPath="[Output_Tabelle_Temp_Path]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteCell Cell="[&quot;H&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjVolume]" WorkbookPath="[Output_Tabelle_Temp_Path]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteCell Cell="[&quot;I&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="[Output_Tabelle_Temp_Sheet]" Text="[ObjWeight]" WorkbookPath="[Output_Tabelle_Temp_Path]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1430,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteCell Cell="[&quot;A&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="[Output_Tabelle_Temp_Sheet]" Text="Completed" WorkbookPath="[Output_Tabelle_Temp_Path]" />
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="FailCase" sap:VirtualizedContainerService.HintSize="663,492" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[String.IsNullOrEmpty(CellValue)]" sap:VirtualizedContainerService.HintSize="621,400" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Then>
+                              <ui:Break sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,241" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelWriteCell Cell="[&quot;A&quot;+Iterator.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="[Output_Tabelle_Temp_Sheet]" Text="Failed" />
+                                <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="2332,134" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="2332,134" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="FreeCAD" />
+  </Sequence>
+</Activity>
