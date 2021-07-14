@@ -23,7 +23,7 @@
 ### Output: 
 	Drive Folder <ITgePA Rothbaum Ordner>
 	Google Excel Sheet <Spread_Rothbaum_output>: [Checked, Part Number, Description, Manufacturer, Hight, Width, Length, Volume, Weight]
-	Output Tabelle Temp.xlsx [Completed, Part Number, Description, Manufacturer, Hight, Width, Length, Volume, Weight] -> ".\"
+	Output Tabelle.xlsx [Completed, Part Number, Description, Manufacturer, Hight, Width, Length, Volume, Weight] -> ".\"
 ### Beschreibung:
 	Erzeugt die Vorlagen falls nicht vorhanden. Daraufhin wird der aktuelle Stand lokal nach <.\Output Tabelle.xlsx> heruntergeladen.
 
